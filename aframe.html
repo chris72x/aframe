@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A-Frame Walkthrough</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Ground -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+
+      <!-- Chair -->
+      <a-box position="0 0.5 -3" depth="1" height="0.5" width="1" color="#D2691E"></a-box>
+      <a-box position="0 1 -3" depth="0.1" height="1" width="1" color="#D2691E"></a-box>
+      <a-box position="-0.5 0.25 -3.5" depth="0.1" height="0.5" width="0.1" color="#D2691E"></a-box>
+      <a-box position="0.5 0.25 -3.5" depth="0.1" height="0.5" width="0.1" color="#D2691E"></a-box>
+      <a-box position="-0.5 0.25 -2.5" depth="0.1" height="0.5" width="0.1" color="#D2691E"></a-box>
+      <a-box position="0.5 0.25 -2.5" depth="0.1" height="0.5" width="0.1" color="#D2691E"></a-box>
+
+      <!-- Cross -->
+      <a-box position="3 2 -5" depth="0.2" height="4" width="1" color="#8B4513"></a-box>
+      <a-box position="3 3 -5" depth="0.2" height="1" width="3" color="#8B4513"></a-box>
+
+      <!-- Camera -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
