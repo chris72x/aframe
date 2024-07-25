@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>A-Frame Walkthrough</title>
+    <title>A-Frame Walkthrough with Quest 3 Controllers</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -24,6 +25,19 @@
 
       <!-- Camera -->
       <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+      <!-- Right Hand Controller -->
+      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FF5733"
+                teleport-controls="cameraRig: #cameraRig; teleportOrigin: #camera;"
+                raycaster="objects: .collidable"></a-entity>
+
+      <!-- Left Hand Controller -->
+      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #33FFCE"></a-entity>
+
+      <!-- Camera Rig for teleportation -->
+      <a-entity id="cameraRig" movement-controls position="0 1.6 0">
+        <a-entity camera></a-entity>
+      </a-entity>
     </a-scene>
   </body>
 </html>
